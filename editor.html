@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element Collector - Editor</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand"><img src="icons/icon32.png" width="20" height="20" alt=""><b>Editor</b></div>
+    <div class="grp">
+      <button class="tb" id="undo" title="Undo (Ctrl+Z)">&#8630;</button>
+      <button class="tb" id="redo" title="Redo (Ctrl+Shift+Z)">&#8631;</button>
+    </div>
+    <div class="grp" id="devices">
+      <button class="tb" data-w="375" title="Mobile 375">Mobile</button>
+      <button class="tb" data-w="768" title="Tablet 768">Tablet</button>
+      <button class="tb" data-w="1280" title="Desktop 1280">Desktop</button>
+      <input id="fw" class="num" type="number" min="200" max="3000" title="Frame width (px)"><span class="dim">px</span>
+      <span class="bp" id="bp" title="Edits are saved for this breakpoint">desktop</span>
+    </div>
+    <div class="grp">
+      <button class="tb" id="zout">&minus;</button>
+      <button class="tb wide" id="zlbl" title="Fit all">100%</button>
+      <button class="tb" id="zin">+</button>
+    </div>
+    <div class="grp">
+      <button class="tb" id="preview" title="Preview: hover states work, no selection">Preview</button>
+    </div>
+    <div class="grow"></div>
+    <a class="tb" id="donate" target="_blank" rel="noopener">&#9829; Support</a>
+    <div class="menuwrap">
+      <button class="tb primary" id="exportBtn">Export &#9662;</button>
+      <div class="menu" id="exportMenu" hidden>
+        <button data-x="html">HTML file (selected frame)</button>
+        <button data-x="html-all">All frames (.zip of HTML)</button>
+        <button data-x="copy-html">Copy HTML + CSS</button>
+        <button data-x="css">CSS file</button>
+        <button data-x="jsx">React component (.zip)</button>
+        <hr>
+        <button data-x="figma">Copy for Figma (paste with Ctrl+V)</button>
+        <button data-x="svg">Download SVG (drag into Figma)</button>
+        <button data-x="png">Download PNG (2x)</button>
+        <hr>
+        <button data-x="json">Save project (.json)</button>
+        <button data-x="import">Open project (.json)</button>
+      </div>
+    </div>
+    <input type="file" id="importFile" accept=".json,application/json" hidden>
+  </header>
+
+  <div class="layout">
+    <aside class="left">
+      <nav class="tabs" id="ltabs">
+        <button data-lt="collected" class="on">Collected</button>
+        <button data-lt="layers">Layers</button>
+        <button data-lt="insert">Insert</button>
+      </nav>
+      <div class="pane" id="lpane"></div>
+    </aside>
+
+    <main class="viewport" id="viewport">
+      <div class="world" id="world"></div>
+      <div class="empty-canvas" id="emptyCanvas">
+        <h2>Your design canvas</h2>
+        <p>Add collected elements from the left, or start with a blank frame.</p>
+      </div>
+      <div class="toast" id="toast" hidden></div>
+    </main>
+
+    <aside class="right" id="props"></aside>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="export.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>

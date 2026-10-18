@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element Collector</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <img src="icons/icon32.png" width="22" height="22" alt="">
+        <span>Element Collector</span>
+      </div>
+      <div class="top-actions">
+        <button id="openEditor" class="btn" type="button" title="Open the visual editor in a tab">Editor</button>
+        <button id="pick" class="btn primary" type="button"></button>
+      </div>
+    </header>
+
+    <div id="notice" class="notice" hidden></div>
+
+    <main id="view"></main>
+
+    <footer class="foot">
+      <span>Free and funded by donations</span>
+      <a id="donate" href="#" target="_blank" rel="noopener"></a>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
