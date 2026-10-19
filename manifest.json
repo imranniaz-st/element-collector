@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "Element Collector",
   "version": "1.1.0",
-  "description": "Select any element on any website, collect its HTML and CSS, then edit it visually in a free design editor and export to HTML, React or Figma.",
-  "minimum_chrome_version": "114",
+  "description": "Select any element, collect its HTML/CSS, edit it visually, and export to HTML, React, or Figma.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
