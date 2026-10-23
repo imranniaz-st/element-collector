@@ -19,9 +19,15 @@
       </div>
     </header>
 
+    <nav class="modes" aria-label="Sections">
+      <button type="button" data-mode="collect" class="on">Element Collector</button>
+      <button type="button" data-mode="live">Live CSS</button>
+    </nav>
+
     <div id="notice" class="notice" hidden></div>
 
     <main id="view"></main>
+    <main id="liveView" hidden></main>
 
     <footer class="foot">
       <span>Free and funded by donations</span>
@@ -31,5 +37,6 @@
 
   <script src="config.js"></script>
   <script src="sidepanel.js"></script>
+  <script src="livecss-panel.js"></script>
 </body>
 </html>

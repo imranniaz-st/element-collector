@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Element Collector",
-  "version": "1.1.0",
-  "description": "Select any element, collect its HTML/CSS, edit it visually, and export to HTML, React, or Figma.",
+  "version": "1.2.0",
+  "description": "Select any element, collect its HTML/CSS, edit it visually, export to HTML, React, or Figma, and live-edit page CSS to preview changes before deploying.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
